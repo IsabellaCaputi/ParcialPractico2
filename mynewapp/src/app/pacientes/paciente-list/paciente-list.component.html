@@ -1,0 +1,25 @@
+<div class="container" style="height: 100vh; display: flex; flex-direction: column;"> 
+  <div class="row" > 
+    <div class="col-md-6" > 
+      <h1 style="background-color: #4444f7;padding: 20px; font-size: 26px; color:#ffffff;border-color:#01012c ">  Pacientes </h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" style="font-size: 17px;border-top: 1px solid #ffffff;border-bottom: 1px solid #ffffff">Nombre</th>
+              <th scope="col" style="font-size: 17px;border-top: 1px solid #ffffff;border-bottom: 1px solid #ffffff">Edad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let c of pacientes ; let i = index" (click)="selectPaciente(c)">
+              <td style="background-color: #c7c4c49c;border-bottom: 1px solid #ffffff;border-right: 1px solid #ffffff"><a href="#" class="serie-link">{{ c.nombre }}</a></td>
+              <td style="background-color: #c7c4c49c;border-bottom: 1px solid #ffffff;border-right: 1px solid #ffffff">{{ c.edad }}</td>
+            </tr>
+        </tbody>
+      </table>
+      <dt class="bold" >Numero Menores: {{ menores }}</dt>
+  </div>
+  <div style="flex: 0 0 300px; margin-left: 20px;">
+    <app-paciente-detail [selectedPaciente]="selectedPaciente"></app-paciente-detail>
+  </div>
+</div>
+

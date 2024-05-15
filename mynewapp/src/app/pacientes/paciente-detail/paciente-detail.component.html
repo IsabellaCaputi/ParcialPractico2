@@ -1,7 +1,8 @@
-<div *ngIf="selectedPaciente" class="card">
+<div *ngIf="selectedPaciente" class="card" style="border-color:#021756">
   <div class="card-body">
-    <h5 class="card-title">{{ selectedPaciente.nombre }}</h5>
-    <p class="card-text">Edad: {{selectedPaciente.edad}} </p>
-    <p class="card-text">Diagnostico: {{selectedPaciente.diagnostico}}</p>
+    <dt class="bold">{{ selectedPaciente.nombre }}</dt>
+    <hr />
+    <dd class="card-text">Edad: {{selectedPaciente.edad}}
+    <dd class="card-text">Diagnostico: {{selectedPaciente.diagnostico}}</dd>
   </div>
 </div>
